@@ -56,14 +56,16 @@ public class BibliotecarioTest {
         RepositorioPrestamo repositorioPrestamo = mock(RepositorioPrestamo.class);
         RepositorioLibro repositorioLibro = mock(RepositorioLibro.class);
         repositorioLibro.agregar(libro);
+        when(repositorioPrestamo.obtenerLibroPrestadoPorIsbn(libro.getIsbn())).thenReturn(null);
         Bibliotecario bibliotecario = new Bibliotecario(repositorioLibro, repositorioPrestamo);
 
         try {
             // act
             bibliotecario.prestar(libro.getIsbn(), MARCOS);
+            fail()
         } catch (PrestamoException e) {
             // assert
-            assertEquals("Los libros políndromos solo se pueden utilizar en la biblitoeca", e.getMessage());
+            assertEquals(Bibliotecario.NO_SE_PRESTAN_LIBROS_PALINDROMOS, e.getMessage());
         }
     }
 
@@ -78,13 +80,13 @@ public class BibliotecarioTest {
         RepositorioPrestamo repositorioPrestamo = mock(RepositorioPrestamo.class);
         RepositorioLibro repositorioLibro = mock(RepositorioLibro.class);
         repositorioLibro.agregar(libro);
+        when(repositorioPrestamo.obtenerLibroPrestadoPorIsbn(libro.getIsbn())).thenReturn(null);
         Bibliotecario bibliotecario = new Bibliotecario(repositorioLibro, repositorioPrestamo);
 
         // act
         bibliotecario.prestar(libro.getIsbn(), MARCOS);
 
         //Assert
-//        assertTrue(bibliotecario.esPrestado(libro.getIsbn()));
         assertNotNull(repositorioPrestamo.obtenerLibroPrestadoPorIsbn(libro.getIsbn()));
     }
 
@@ -104,13 +106,13 @@ public class BibliotecarioTest {
         Bibliotecario bibliotecario = new Bibliotecario(repositorioLibro, repositorioPrestamo);
 
         // act
-//        boolean esPrestado = bibliotecario.esPrestado(libro.getIsbn());
+        bibliotecario.prestar(libro.getIsbn(), MARCOS);
 
         //assert
-        //assertFalse(esPrestado);
+        assertNotNull(repositorioPrestamo.obtenerLibroPrestadoPorIsbn(libro.getIsbn()));
     }
 
-    @Test
+    @Tests
     public void esMayorTest() {
         // arrange
         String isbn = "8g9f7t9";
@@ -119,15 +121,15 @@ public class BibliotecarioTest {
         RepositorioPrestamo repositorioPrestamo = mock(RepositorioPrestamo.class);
         RepositorioLibro repositorioLibro = mock(RepositorioLibro.class);
         repositorioLibro.agregar(libro);
-
+        when(repositorioPrestamo.obtenerLibroPrestadoPorIsbn(libro.getIsbn())).thenReturn(null);
+        when(repositorioPrestamo.obtener(libro.getIsbn()).getFechaEntregaMaxima()).thenReturn(repositorioPrestamo.obtener(libro.getIsbn()).getFechaEntregaMaxima());
         Bibliotecario bibliotecario = new Bibliotecario(repositorioLibro, repositorioPrestamo);
 
         // act
         bibliotecario.prestar(libro.getIsbn(), MARCOS);
 
         // asserts
-//        assertTrue(bibliotecario.esPrestado(libro.getIsbn()));
-        assertNotNull(repositorioPrestamo.obtenerLibroPrestadoPorIsbn(libro.getIsbn()));
+
         assertNotNull(repositorioPrestamo.obtener(libro.getIsbn()).getFechaEntregaMaxima());
 
     }
@@ -141,15 +143,15 @@ public class BibliotecarioTest {
         RepositorioPrestamo repositorioPrestamo = mock(RepositorioPrestamo.class);
         RepositorioLibro repositorioLibro = mock(RepositorioLibro.class);
         repositorioLibro.agregar(libro);
-
+        when(repositorioPrestamo.obtenerLibroPrestadoPorIsbn(libro.getIsbn())).thenReturn(null);
+        when(repositorioPrestamo.obtener(libro.getIsbn()).getFechaEntregaMaxima()).thenReturn(null);
         Bibliotecario bibliotecario = new Bibliotecario(repositorioLibro, repositorioPrestamo);
 
         // act
         bibliotecario.prestar(libro.getIsbn(), MARCOS);
 
         // asserts
-//        assertTrue(bibliotecario.esPrestado(libro.getIsbn()));
-        assertNotNull(repositorioPrestamo.obtenerLibroPrestadoPorIsbn(libro.getIsbn()));
+//
         assertNull(repositorioPrestamo.obtener(libro.getIsbn()).getFechaEntregaMaxima());
 
     }
