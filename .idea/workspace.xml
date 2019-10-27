@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="194d31e5-2b03-473f-bb2a-ca17f110f045" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules/proyecto.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -13,24 +12,18 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/dominio/Bibliotecario.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/dominio/Bibliotecario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/persistencia/builder/LibroBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/persistencia/builder/LibroBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/persistencia/repositorio/RepositorioPrestamoPersistente.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/persistencia/repositorio/RepositorioPrestamoPersistente.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/dominio/integracion/BibliotecarioTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/dominio/integracion/BibliotecarioTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/dominio/unitaria/BibliotecarioTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/dominio/unitaria/BibliotecarioTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/dominio/unitaria/LibroTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/dominio/unitaria/LibroTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/testdatabuilder/LibroTestDataBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/testdatabuilder/LibroTestDataBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/dominio.unitaria.BibliotecarioTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/dominio.unitaria.BibliotecarioTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/dominio.unitaria.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/dominio.unitaria.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-dominio.unitaria.BibliotecarioTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-dominio.unitaria.BibliotecarioTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dominio/Bibliotecario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dominio/Bibliotecario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dominio/unitaria/BibliotecarioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dominio/unitaria/BibliotecarioTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +104,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.BibliotecarioTest">
+  <component name="RunManager" selected="Gradle.BibliotecarioTest.esPalindromoTest">
     <configuration name="BibliotecarioTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -214,11 +207,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.BibliotecarioTest.esPalindromoTest" />
+        <item itemvalue="Gradle.BibliotecarioTest.esPrestadoTest" />
         <item itemvalue="Gradle.BibliotecarioTest" />
         <item itemvalue="Gradle.BibliotecarioTest.esMayTest" />
         <item itemvalue="Gradle.BibliotecarioTest.libroNoPrestadoTest" />
-        <item itemvalue="Gradle.BibliotecarioTest.esPalindromoTest" />
-        <item itemvalue="Gradle.BibliotecarioTest.esPrestadoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -232,7 +225,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571969260429</updated>
-      <workItem from="1572122278823" duration="1431000" />
+      <workItem from="1572122278823" duration="4556000" />
     </task>
     <servers />
   </component>

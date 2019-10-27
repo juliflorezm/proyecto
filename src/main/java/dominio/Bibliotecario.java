@@ -44,8 +44,10 @@ public class Bibliotecario {
     }
 
     private boolean esPalindromo(String isbn) {
-        String invertido = new StringBuilder().reverse().toString();
-        return invertido.equals(isbn);
+        return new StringBuilder(isbn)
+                .reverse()
+                .toString()
+                .equals(isbn);
     }
 
     private boolean esPrestado(String isbn) {

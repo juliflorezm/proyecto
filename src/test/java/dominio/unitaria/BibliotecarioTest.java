@@ -50,19 +50,19 @@ public class BibliotecarioTest {
     public void esPalindromoTest() {
 
         // arrange
-        String isbn = "1221";
-        Libro libro = new LibroTestDataBuilder().conIsbn(isbn).build();
+        Libro libro = new LibroTestDataBuilder().conIsbn("1221").build();
 
         RepositorioPrestamo repositorioPrestamo = mock(RepositorioPrestamo.class);
         RepositorioLibro repositorioLibro = mock(RepositorioLibro.class);
-        repositorioLibro.agregar(libro);
+
         when(repositorioPrestamo.obtenerLibroPrestadoPorIsbn(libro.getIsbn())).thenReturn(null);
+
         Bibliotecario bibliotecario = new Bibliotecario(repositorioLibro, repositorioPrestamo);
 
         try {
             // act
             bibliotecario.prestar(libro.getIsbn(), MARCOS);
-            fail()
+            fail();
         } catch (PrestamoException e) {
             // assert
             assertEquals(Bibliotecario.NO_SE_PRESTAN_LIBROS_PALINDROMOS, e.getMessage());
@@ -70,59 +70,19 @@ public class BibliotecarioTest {
     }
 
     @Test
-    public void noEsPalindromoTest() {
-
-        // arrange
-        String isbn = "2345";
-        Libro libro = new LibroTestDataBuilder().conIsbn(isbn).build();
-
-
-        RepositorioPrestamo repositorioPrestamo = mock(RepositorioPrestamo.class);
-        RepositorioLibro repositorioLibro = mock(RepositorioLibro.class);
-        repositorioLibro.agregar(libro);
-        when(repositorioPrestamo.obtenerLibroPrestadoPorIsbn(libro.getIsbn())).thenReturn(null);
-        Bibliotecario bibliotecario = new Bibliotecario(repositorioLibro, repositorioPrestamo);
-
-        // act
-        bibliotecario.prestar(libro.getIsbn(), MARCOS);
-
-        //Assert
-        assertNotNull(repositorioPrestamo.obtenerLibroPrestadoPorIsbn(libro.getIsbn()));
-    }
-
-    @Test
-    public void libroNoPrestadoTest() {
-
-        // arrange
-        LibroTestDataBuilder libroTestDataBuilder = new LibroTestDataBuilder();
-
-        Libro libro = libroTestDataBuilder.build();
-
-        RepositorioPrestamo repositorioPrestamo = mock(RepositorioPrestamo.class);
-        RepositorioLibro repositorioLibro = mock(RepositorioLibro.class);
-
-        when(repositorioPrestamo.obtenerLibroPrestadoPorIsbn(libro.getIsbn())).thenReturn(null);
-
-        Bibliotecario bibliotecario = new Bibliotecario(repositorioLibro, repositorioPrestamo);
-
-        // act
-        bibliotecario.prestar(libro.getIsbn(), MARCOS);
-
-        //assert
-        assertNotNull(repositorioPrestamo.obtenerLibroPrestadoPorIsbn(libro.getIsbn()));
-    }
-
-    @Tests
     public void esMayorTest() {
         // arrange
-        String isbn = "8g9f7t9";
-        Libro libro = new LibroTestDataBuilder().conIsbn(isbn).build();
+        Libro libro = new LibroTestDataBuilder().conIsbn("8g9f7t9").build();
 
         RepositorioPrestamo repositorioPrestamo = mock(RepositorioPrestamo.class);
         RepositorioLibro repositorioLibro = mock(RepositorioLibro.class);
-        repositorioLibro.agregar(libro);
-        when(repositorioPrestamo.obtenerLibroPrestadoPorIsbn(libro.getIsbn())).thenReturn(null);
-        when(repositorioPrestamo.obtener(libro.getIsbn()).getFechaEntregaMaxima()).thenReturn(repositorioPrestamo.obtener(libro.getIsbn()).getFechaEntregaMaxima());
+
+        when(repositorioPrestamo.obtenerLibroPrestadoPorIsbn(libro.getIsbn()))
+                .thenReturn(null);
+
+        when(repositorioPrestamo.obtener(libro.getIsbn()).getFechaEntregaMaxima())
+                .thenReturn(repositorioPrestamo.obtener(libro.getIsbn()).getFechaEntregaMaxima());
+
         Bibliotecario bibliotecario = new Bibliotecario(repositorioLibro, repositorioPrestamo);
 
         // act
@@ -155,4 +115,12 @@ public class BibliotecarioTest {
         assertNull(repositorioPrestamo.obtener(libro.getIsbn()).getFechaEntregaMaxima());
 
     }
+
+
+
+    @Test
+    public void esMayorA30YCaeDomingoLaEntrega(){
+
+    }
+
 }
