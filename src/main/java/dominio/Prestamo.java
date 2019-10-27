@@ -14,13 +14,6 @@ public class Prestamo {
 		this.libro = libro;
 	}
 
-	public Prestamo(Libro libro, String nombreUsuario) {
-		this.fechaSolicitud = new Date();
-		this.libro = libro;
-		this.nombreUsuario= nombreUsuario;
-	}
-
-	
 	public Prestamo(Date fechaSolicitud, Libro libro, Date fechaEntregaMaxima, String nombreUsuario) {
 		this.fechaSolicitud = fechaSolicitud;
 		this.libro = libro;

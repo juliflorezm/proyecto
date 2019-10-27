@@ -104,13 +104,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.BibliotecarioTest.esPalindromoTest">
-    <configuration name="BibliotecarioTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.BibliotecarioTest.esPrestadoTest">
+    <configuration name="BibliotecarioTest.esMayorA30YCaeDomingoLaEntrega" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;dominio.unitaria.BibliotecarioTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;dominio.unitaria.BibliotecarioTest.esMayorA30YCaeDomingoLaEntrega&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -125,12 +125,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="BibliotecarioTest.esMayTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BibliotecarioTest.esMayorA30YCaeDomingoLaEntregaTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;dominio.unitaria.BibliotecarioTest.esMayTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;dominio.unitaria.BibliotecarioTest.esMayorA30YCaeDomingoLaEntregaTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -145,12 +145,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="BibliotecarioTest.esPalindromoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BibliotecarioTest.esMayorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;dominio.unitaria.BibliotecarioTest.esPalindromoTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;dominio.unitaria.BibliotecarioTest.esMayorTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -185,12 +185,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="BibliotecarioTest.libroNoPrestadoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BibliotecarioTest.noEsMayorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;dominio.unitaria.BibliotecarioTest.libroNoPrestadoTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;dominio.unitaria.BibliotecarioTest.noEsMayorTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -207,11 +207,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.BibliotecarioTest.esPalindromoTest" />
         <item itemvalue="Gradle.BibliotecarioTest.esPrestadoTest" />
-        <item itemvalue="Gradle.BibliotecarioTest" />
-        <item itemvalue="Gradle.BibliotecarioTest.esMayTest" />
-        <item itemvalue="Gradle.BibliotecarioTest.libroNoPrestadoTest" />
+        <item itemvalue="Gradle.BibliotecarioTest.esMayorA30YCaeDomingoLaEntregaTest" />
+        <item itemvalue="Gradle.BibliotecarioTest.esMayorTest" />
+        <item itemvalue="Gradle.BibliotecarioTest.noEsMayorTest" />
+        <item itemvalue="Gradle.BibliotecarioTest.esMayorA30YCaeDomingoLaEntrega" />
       </list>
     </recent_temporary>
   </component>
