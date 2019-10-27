@@ -31,7 +31,7 @@ public class Bibliotecario {
         if (esPalindromo(isbn)) {
             throw new PrestamoException(NO_SE_PRESTAN_LIBROS_PALINDROMOS);
         }
-        Date fechaSolicitud = new Date();
+        Date fechaSolicitud = new WrapperDate().nuevaFecha();
         Date fechaEntregaMaxima = null;
 
         if (esMayor(isbn)) {

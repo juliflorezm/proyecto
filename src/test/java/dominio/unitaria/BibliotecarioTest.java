@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+import dominio.WrapperDate;
 import dominio.excepcion.PrestamoException;
 import org.junit.Test;
 
@@ -56,8 +57,11 @@ public class BibliotecarioTest {
 
         RepositorioPrestamo repositorioPrestamo = mock(RepositorioPrestamo.class);
         RepositorioLibro repositorioLibro = mock(RepositorioLibro.class);
+        WrapperDate wrapperDate = mock(WrapperDate.class);
 
         when(repositorioPrestamo.obtenerLibroPrestadoPorIsbn(libro.getIsbn())).thenReturn(null);
+
+        when(wrapperDate.nuevaFecha()).thenReturn(new Date(1, 1, 1));
 
         Bibliotecario bibliotecario = new Bibliotecario(repositorioLibro, repositorioPrestamo);
 
@@ -75,7 +79,7 @@ public class BibliotecarioTest {
     public void esMayorTest() {
         // arrange
         Libro libro = new LibroTestDataBuilder().conIsbn("8g9f7t9").build();
-        Date date = new Date(2019,10,13);
+        Date date = new Date(2019, 10, 13);
         RepositorioPrestamo repositorioPrestamo = mock(RepositorioPrestamo.class);
         RepositorioLibro repositorioLibro = mock(RepositorioLibro.class);
 
@@ -118,12 +122,14 @@ public class BibliotecarioTest {
     }
 
     @Test
-    public void esMayorA30YCaeDomingoLaEntregaTest(){
+    public void esMayorA30YCaeDomingoLaEntregaTest() {
         // arrange
         Libro libro = new LibroTestDataBuilder().conIsbn("8g9f7t9").build();
 
-        Date dateSolicitud=new Date(2019,10 , 25);;
-        Date dateMax=new Date(2019,11 , 11);;
+        Date dateSolicitud = new Date(2019, 10, 25);
+        ;
+        Date dateMax = new Date(2019, 11, 11);
+        ;
 
         RepositorioPrestamo repositorioPrestamo = mock(RepositorioPrestamo.class);
         RepositorioLibro repositorioLibro = mock(RepositorioLibro.class);
@@ -143,9 +149,8 @@ public class BibliotecarioTest {
 
         // asserts
         //assertNotNull(repositorioPrestamo.obtener(libro.getIsbn()).getFechaEntregaMaxima());
-        assertEquals(repositorioPrestamo.obtener(libro.getIsbn()).getFechaEntregaMaxima(),dateMax);
+        assertEquals(repositorioPrestamo.obtener(libro.getIsbn()).getFechaEntregaMaxima(), dateMax);
     }
-
 
 
 }
