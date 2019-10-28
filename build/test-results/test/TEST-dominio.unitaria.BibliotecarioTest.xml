@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="dominio.unitaria.BibliotecarioTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2019-10-28T01:35:51" hostname="Lenovo-PC" time="1.016">
+<testsuite name="dominio.unitaria.BibliotecarioTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2019-10-28T02:04:52" hostname="Lenovo-PC" time="0.489">
   <properties/>
-  <testcase name="esMayorA30YCaeDomingoLaEntregaTest" classname="dominio.unitaria.BibliotecarioTest" time="1.016">
+  <testcase name="esMayorA30YCaeDomingoLaEntregaTest" classname="dominio.unitaria.BibliotecarioTest" time="0.489">
     <failure message="java.lang.NullPointerException" type="java.lang.NullPointerException">java.lang.NullPointerException
-	at dominio.unitaria.BibliotecarioTest.esMayorA30YCaeDomingoLaEntregaTest(BibliotecarioTest.java:139)
+	at dominio.unitaria.BibliotecarioTest.esMayorA30YCaeDomingoLaEntregaTest(BibliotecarioTest.java:138)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

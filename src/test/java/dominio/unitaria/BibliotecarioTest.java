@@ -51,8 +51,7 @@ public class BibliotecarioTest {
 
     @Test
     public void esPalindromoTest() {
-
-        // arrange
+     // arrange
         Libro libro = new LibroTestDataBuilder().conIsbn("1221").build();
 
         RepositorioPrestamo repositorioPrestamo = mock(RepositorioPrestamo.class);
@@ -70,6 +69,7 @@ public class BibliotecarioTest {
             // assert
             assertEquals(Bibliotecario.NO_SE_PRESTAN_LIBROS_PALINDROMOS, e.getMessage());
         }
+
     }
 
     @Test
@@ -89,7 +89,6 @@ public class BibliotecarioTest {
         bibliotecario.prestar(libro.getIsbn(), MARCOS);
 
         // asserts
-
         assertNotNull(repositorioPrestamo.obtener(libro.getIsbn()).getFechaEntregaMaxima());
     }
 
@@ -115,8 +114,8 @@ public class BibliotecarioTest {
     }
 
     @Test
-    public void esMayorA30YCaeDomingoLaEntregaTest(){
-        // arrange
+    public void esMayorA30YCaeDomingoLaEntregaTest() {
+// arrange
         Libro libro = new LibroTestDataBuilder().conIsbn("8g9f7t9").build();
 
         Date dateMax=new Date(2019,11 , 11);;
@@ -137,8 +136,8 @@ public class BibliotecarioTest {
 
         // assert
         assertEquals(repositorioPrestamo.obtener(libro.getIsbn()).getFechaEntregaMaxima(),dateMax);
-
     }
+
 
 
 
