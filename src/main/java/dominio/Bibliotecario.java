@@ -6,7 +6,6 @@ import dominio.repositorio.RepositorioPrestamo;
 
 import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.Objects;
 
 public class Bibliotecario {
@@ -31,7 +30,7 @@ public class Bibliotecario {
         if (esPalindromo(isbn)) {
             throw new PrestamoException(NO_SE_PRESTAN_LIBROS_PALINDROMOS);
         }
-        Date fechaSolicitud = new Date();
+        Date fechaSolicitud = new WrapperDate().nuevaFecha();
         Date fechaEntregaMaxima = null;
 
         if (esMayor(isbn)) {
@@ -88,7 +87,9 @@ public class Bibliotecario {
         if (calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY) {
             calendar.add(Calendar.DAY_OF_YEAR, 1);
         }
+        //return new Date(calendar.YEAR,calendar.MONTH,Calendar.DATE);
         return calendar.getTime();
+
     }
 
 
